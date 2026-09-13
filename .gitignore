@@ -1,0 +1,18 @@
+node_modules/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor and profiling artifacts
+.vscode/
+*.cpuprofile
+
+# OS files
+.DS_Store
+Thumbs.db
