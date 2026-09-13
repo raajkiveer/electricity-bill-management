@@ -8,10 +8,12 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Database connection
+// Database connection
 const db = mysql.createConnection({
   host: process.env.ELECTRICITY_DB_HOST || 'localhost',
+  port: process.env.ELECTRICITY_DB_PORT || 3306,
   user: process.env.ELECTRICITY_DB_USER || 'root',
-  password: process.env.ELECTRICITY_DB_PASSWORD || 'rajesh@2003',
+  password: process.env.ELECTRICITY_DB_PASSWORD || '',
   database: process.env.ELECTRICITY_DB_NAME || 'electricity_db_html'
 });
 
@@ -20,6 +22,7 @@ db.connect((err) => {
     console.error('Database connection failed:', err);
     return;
   }
+
   console.log('Connected to MySQL database');
 });
 
